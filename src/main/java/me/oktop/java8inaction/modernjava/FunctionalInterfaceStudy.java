@@ -9,7 +9,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public class FunctionalInterface {
+public class FunctionalInterfaceStudy {
 
     public static int toInt(String s) {
         Function<String, Integer> function = v -> Integer.parseInt(v);
@@ -50,6 +50,15 @@ public class FunctionalInterface {
         }
     }
 
+    public static <T1, T2, T3> String println(T1 t1, T2 t2, T3 t3,
+                                              Function3<T1, T2, T3, String> function) {
+        return function.apply(t1, t2, t3);
+    }
+
+    @FunctionalInterface
+    interface Function3<T1, T2, T3, R> {
+        R apply(T1 t1, T2 t2, T3 t3);
+    }
 
     public static void main(String[] args) {
         // apply
