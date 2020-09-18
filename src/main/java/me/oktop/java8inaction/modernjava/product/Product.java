@@ -3,12 +3,14 @@ package me.oktop.java8inaction.modernjava.product;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+@ToString
 @NoArgsConstructor
 @Getter
 public class Product {
